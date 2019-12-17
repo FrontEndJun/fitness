@@ -1,0 +1,21 @@
+.logo {
+  font-family: $secFont;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+@media screen and (max-width: $tabletWidth) {
+  .logo {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: $phoneWidth) {
+  .logo {
+    font-size: 20px;
+  }
+}

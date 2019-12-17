@@ -1,0 +1,159 @@
+.promo {
+  padding-bottom: 48px;
+
+  & h1 {
+    margin: 0;
+    margin-bottom: 61px;
+    font-family: $secFont;
+    font-weight: bold;
+    font-size: 109px;
+    line-height: 1;
+    text-align: right;
+    letter-spacing: 0.03em;
+    max-width: 300px;
+  }
+
+  & img {
+    margin-left: auto;
+    position: relative;
+    top: -3px;
+    width: 500px;
+  }
+}
+
+.promo__inner {
+  display: flex;
+}
+
+.promo__column {
+  position: relative;
+  padding-top: 113px;
+  margin-right: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 395px;
+}
+
+.promo__city {
+  margin-bottom: 8px;
+  font-family: $secFont;
+  font-size: 49px;
+  line-height: 1;
+  letter-spacing: 0.03em;
+}
+
+.promo__advert {
+  position: absolute;
+  left: 19px;
+  top: 302px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+.promo__socials {
+  list-style: none;
+  margin: 0;
+  margin-top: auto;
+  margin-left: auto;
+  margin-bottom: 32px;
+  padding: 0;
+
+  & li {
+    display: block;
+    margin-bottom: 11px;
+  }
+}
+
+.promo__social-link {
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.promo__button {
+  width: 234px;
+  border: 4px solid #ffffff;
+  padding: 19px 20px;
+}
+
+@media screen and (max-width: $tabletWidth) {
+  .promo {
+    padding-bottom: 82px;
+
+    & h1 {
+      margin-bottom: 45px;
+      max-width: 240px;
+      font-size: 86px;
+    }
+
+    & img {
+      position: static;
+      width: 324px;
+      height: 390px;
+    }
+  }
+
+  .promo__column {
+    padding-top: 55px;
+    width: calc(50%);
+    margin-right: 30px;
+  }
+
+  .promo__city {
+    font-size: 34px;
+    margin-bottom: 0;
+  }
+
+  .promo__advert {
+    left: 0;
+    top: 186px;
+  }
+
+  .promo__socials {
+    display: none;
+  }
+
+  .promo__button {
+    width: 185px;
+  }
+}
+
+@media screen and (max-width: $phoneWidth) {
+  .promo {
+    padding-bottom: 78px;
+
+    & h1 {
+      margin-bottom: 45px;
+      font-size: 78px;
+      max-width: 215px;
+    }
+
+    & img {
+      display: none;
+    }
+  }
+
+  .promo__column {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .promo__city {
+    font-size: 28px;
+    margin-bottom: 7px;
+  }
+
+  .promo__advert {
+    top: 176px;
+  }
+
+  .promo__button {
+    width: 100%;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+}

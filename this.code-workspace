@@ -1,9 +1,11 @@
 {
   "folders": [
     {
-      "name": "newPrj",
       "path": "."
     }
   ],
-  "settings": {}
+  "settings": {
+    "editor.minimap.maxColumn": 240,
+    "editor.wordWrapColumn": 240
+  }
 }

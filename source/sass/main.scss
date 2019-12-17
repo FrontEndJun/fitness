@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: $mainFont;
+  color: $mainFontColor;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.gradient-bg {
+  background: url("../img/bg.jpg") center no-repeat #511fc4e5;
+  background-size: cover;
+}
