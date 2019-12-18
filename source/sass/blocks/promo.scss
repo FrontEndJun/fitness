@@ -14,7 +14,6 @@
   }
 
   & img {
-    margin-left: auto;
     position: relative;
     top: -3px;
     width: 500px;
@@ -29,8 +28,6 @@
   position: relative;
   padding-top: 113px;
   margin-right: 64px;
-  display: flex;
-  flex-direction: column;
   align-items: flex-end;
   width: 395px;
 }
@@ -56,8 +53,8 @@
 .promo__socials {
   list-style: none;
   margin: 0;
-  margin-top: auto;
   margin-left: auto;
+  align-self: flex-end;
   margin-bottom: 32px;
   padding: 0;
 

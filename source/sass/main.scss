@@ -28,6 +28,12 @@ img {
 }
 
 .gradient-bg {
-  background: url("../img/bg.jpg") center no-repeat #511fc4e5;
-  background-size: cover;
+  // background: url("../img/bg.jpg") center no-repeat #511fc4e5;
+  // background-size: cover;
+  background: radial-gradient(63.97% 65.22% at 21.03% 74.06%, #003d85, #b80027);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
 }
