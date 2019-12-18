@@ -1,0 +1,24 @@
+.info {
+  background-color: #ffffff;
+}
+
+.info h2 {
+  font-family: $secFont;
+  font-size: 49px;
+  line-height: 1;
+  letter-spacing: 0.03em;
+
+  color: $secFontColor;
+}
+
+@media screen and (max-width: $tabletWidth) {
+  .info h2 {
+    font-size: 42px;
+  }
+}
+
+@media screen and (max-width: $phoneWidth) {
+  .info h2 {
+    font-size: 32px;
+  }
+}
