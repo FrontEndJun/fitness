@@ -1,0 +1,110 @@
+.abonements {
+  position: relative;
+  background-color: $lightBG;
+  color: $secFontColor;
+  padding-top: 116px;
+  padding-bottom: 81px;
+
+  & h2 {
+    margin: 0 0 37px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 473px;
+    height: 345px;
+    bottom: -79px;
+    right: -194px;
+    background: url("../img/wght.png") center no-repeat;
+    background-size: cover;
+  }
+}
+
+.abonements__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.abonements__tabs {
+  margin: 0 0 37px;
+}
+
+.abonements__list {
+  margin: 0 -20px;
+  align-self: stretch;
+}
+
+.abonements__list-tab {
+  margin: 0;
+  display: none;
+  flex-wrap: wrap;
+  align-self: stretch;
+
+  list-style: none;
+  padding: 0;
+
+  &.active {
+    display: flex;
+  }
+}
+
+.abonements__card {
+  margin: 0 20px 40px;
+}
+
+@media screen and (max-width: $tabletWidth) {
+  .abonements {
+    padding-top: 98px;
+    padding-bottom: 60px;
+
+    & h2 {
+      margin-bottom: 30px;
+    }
+
+    &::before {
+      content: "";
+      width: 422px;
+      bottom: -77px;
+      right: -79px;
+    }
+  }
+
+  .abonements__tabs {
+    margin-bottom: 44px;
+  }
+
+  .abonements__card {
+    margin: 0 auto 40px;
+  }
+}
+
+@media screen and (max-width: $phoneWidth) {
+  .abonements {
+    padding-top: 68px;
+    padding-bottom: 32px;
+
+    & h2 {
+      margin-bottom: 25px;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .abonements__tabs {
+    margin-bottom: 34px;
+  }
+
+  .abonements__list {
+    margin: 0;
+  }
+
+  .abonements__card {
+    margin: 0 0 36px;
+  }
+}
