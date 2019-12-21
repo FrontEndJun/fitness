@@ -1,0 +1,81 @@
+.slider {
+  display: flex;
+  position: relative;
+
+  & button {
+    padding: 0;
+    position: absolute;
+    top: 0;
+    height: 100%;
+
+    width: 57px;
+    background-color: transparent;
+    border: none;
+
+    &.prev {
+      right: 100%;
+
+      &::before {
+        left: 14px;
+        transform: rotate(-45deg) translateY(-50%);
+        border-left: 1px solid $darkBG;
+      }
+    }
+
+    &.next {
+      left: 100%;
+
+      &::before {
+        right: 14px;
+        transform: rotate(45deg) translateY(-50%);
+        border-right: 1px solid $darkBG;
+      }
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+
+  & button::before {
+    content: "";
+    position: absolute;
+    opacity: 0.5;
+    width: 22px;
+    height: 22px;
+    border-top: 1px solid $darkBG;
+    top: 49%;
+  }
+}
+
+@media screen and (max-width: $tabletWidth) {
+  .slider {
+    & button {
+      height: auto;
+      align-self: stretch;
+      position: static;
+    }
+  }
+}
+
+@media screen and (max-width: $phoneWidth) {
+  .slider {
+    & button {
+      min-width: 32px;
+      max-width: 32px;
+
+      &::before {
+        width: 14px;
+        height: 14px;
+      }
+
+      &.prev::before {
+        left: 7px;
+      }
+
+      &.next::before {
+        right: 7px;
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.trainers {
+  padding: 55px 0 100px;
+
+  & h2 {
+    text-align: left;
+    margin: 0;
+    margin-bottom: 55px;
+  }
+
+  &__list {
+    margin: 0 -20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    list-style: none;
+    padding: 0;
+
+    & > li {
+      margin: 0 20px 20px;
+    }
+  }
+}
+
+@media screen and (max-width: $tabletWidth) {
+  .trainers {
+    padding: 38px 0 85px;
+
+    & h2 {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    &__list {
+      margin: 0 -15px;
+
+      & > li {
+        margin: 0 15px 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $phoneWidth) {
+  .trainers {
+    padding: 8px 0 54px;
+
+    & h2 {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+
+    &__list {
+      margin: 0;
+
+      & > li {
+        margin: 0 0 15px;
+      }
+    }
+  }
+}

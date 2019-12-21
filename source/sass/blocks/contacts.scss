@@ -1,0 +1,56 @@
+.contacts {
+  width: 50%;
+  padding-left: 120px;
+  color: $secFontColor;
+
+  &__data {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    list-style: none;
+
+    & li {
+      width: 45%;
+      margin-right: 5%;
+
+      &:nth-child(2n-1) {
+        border-right: 1px solid #74819c;
+        margin-right: auto;
+      }
+    }
+
+    & p {
+      font-weight: bold;
+    }
+
+    & .contacts__data-spec {
+      color: $secFontColor;
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: $tabletWidth) {
+  .contacts {
+    width: 100%;
+    padding-left: 88px;
+  }
+}
+
+@media screen and (max-width: $phoneWidth) {
+  .contacts {
+    width: 100%;
+    padding-left: 0;
+
+    &__data {
+      & li {
+        width: 100%;
+
+        &:nth-child(2n-1) {
+          border-right: none;
+        }
+      }
+    }
+  }
+}

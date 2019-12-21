@@ -1,0 +1,106 @@
+.special {
+  background-color: $darkBG;
+  color: $mainFontColor;
+  width: 50%;
+  padding-right: 170px;
+
+  & h2 {
+    color: $mainFontColor;
+  }
+
+  &__form-row {
+    display: flex;
+    flex-flow: column-reverse;
+    width: calc(50% - 15px);
+    margin-bottom: 20px;
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 16px;
+
+    & input {
+      color: $mainFontColor;
+      font-size: inherit;
+      display: block;
+      padding: 3px 10px;
+      background: $darkBG;
+      border: none;
+      border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.5);
+
+      &:focus {
+        border-color: #ffffff;
+        border-style: dashed;
+        outline: none;
+
+        & + label {
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+
+    & label {
+      position: relative;
+      top: 15px;
+      left: 3px;
+      transition: all 0.1s linear;
+    }
+
+    & button {
+      padding: 20px 10px;
+      width: 100%;
+      background: $darkBG;
+      border: 3px solid #ffffff;
+
+      &:hover {
+        background: #ffffff;
+        color: $secFontColor;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tabletWidth) {
+  .special {
+    position: relative;
+    width: 100%;
+    padding: 0 118px 0 88px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 20vw;
+      height: 100%;
+      left: 100%;
+      top: 0;
+      background-color: $darkBG;
+      z-index: 1;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 20vw;
+      height: 100%;
+      right: 100%;
+      top: 0;
+      background-color: $darkBG;
+      z-index: 1;
+    }
+  }
+}
+
+@media screen and (max-width: $phoneWidth) {
+  .special {
+    width: 100%;
+    padding: 0 0 0 0;
+
+    &__form-row {
+      width: 100%;
+    }
+  }
+}

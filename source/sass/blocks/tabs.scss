@@ -3,9 +3,10 @@
   list-style: none;
   padding: 0;
   display: flex;
-  width: calc(350 / 1200 * 100%);
+  flex-wrap: wrap;
+  width: 338px;
   justify-content: space-between;
-  padding-bottom: 13px;
+  align-items: flex-start;
 
   & li {
     opacity: 0.5;
@@ -17,9 +18,10 @@
     }
 
     &.tabs__bar {
-      opacity: 1;
-      position: absolute;
       width: 100%;
+      opacity: 1;
+      position: relative;
+      top: 11px;
       height: 2px;
       left: 0;
       bottom: 0;

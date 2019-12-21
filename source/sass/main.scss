@@ -37,3 +37,22 @@ img {
   display: flex;
   flex-direction: column;
 }
+
+.half-bg {
+  background: linear-gradient(to right, $darkBG 50%, #ffffff 50%);
+}
+
+.info-row {
+  display: flex;
+}
+
+@media screen and (max-width: $tabletWidth) {
+  .half-bg {
+    background: none;
+    position: relative;
+  }
+
+  .info-row {
+    flex-direction: column;
+  }
+}

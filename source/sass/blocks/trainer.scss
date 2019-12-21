@@ -1,0 +1,95 @@
+.trainer {
+  width: calc(25% - 40px);
+  background-position: top center;
+  background-size: cover;
+  min-height: 294px;
+  background-color: $darkBG;
+  padding: 53px 0 22px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+
+  &.active {
+    display: flex;
+  }
+
+  & p {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    margin-top: auto;
+
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  &__info {
+    max-width: 100%;
+    display: none;
+  }
+
+  &__speciality {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1;
+    color: #b6bdcc;
+    margin-bottom: 36px;
+  }
+
+  &__advances {
+    padding-left: 70px;
+    padding-right: 20px;
+    list-style-type: disc;
+
+    & li {
+      margin-bottom: 13px;
+    }
+  }
+
+  &--1 {
+    background-image: url("../img/t1.jpg");
+  }
+
+  &--2 {
+    background-image: url("../img/t2.jpg");
+  }
+
+  &--3 {
+    background-image: url("../img/t3.jpg");
+  }
+
+  &--4 {
+    background-image: url("../img/t4.jpg");
+  }
+
+  &:hover {
+    box-shadow: inset 0 0 0 1000px rgba($color: $darkBG, $alpha: 0.9);
+
+    & p {
+      margin-top: 0;
+    }
+
+    & .trainer__info {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: $tabletWidth) {
+  .trainer {
+    width: calc(50% - 30px);
+  }
+}
+
+@media screen and (max-width: $phoneWidth) {
+  .trainer {
+    width: 100%;
+    padding-top: 42px;
+    min-height: 274px;
+
+    &__advances {
+      padding-left: 50px;
+    }
+  }
+}
