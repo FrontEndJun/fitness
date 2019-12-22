@@ -1,6 +1,10 @@
 .footer {
   background-color: #030a1a;
-  padding: 44px 0;
+  padding: 40px 0;
+
+  &__inner {
+    display: flex;
+  }
 
   &__links {
     display: flex;
@@ -38,8 +42,16 @@
   &__socials {
     display: flex;
     list-style: none;
-    margin-left: auto;
+    margin: 0 0 0 auto;
     padding: 0;
+
+    & li {
+      margin-right: 25px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 
   &__socials-link {
@@ -61,6 +73,11 @@
 
     &--fb {
       background-image: url("../img/fb.png");
+      width: 12px;
+    }
+
+    &:hover {
+      opacity: 0.7;
     }
   }
 }
@@ -79,19 +96,34 @@
         }
       }
     }
+
+    &__socials {
+      & li {
+        margin-right: 20px;
+      }
+    }
   }
 }
 
 @media screen and (max-width: $phoneWidth) {
   .footer {
-    padding: 44px 0;
+    padding: 49px 0;
+
+    &__inner {
+      flex-wrap: wrap;
+    }
 
     &__links {
       flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 18px;
 
       & li {
+        font-size: 16px;
         width: calc(50% - 15px);
         margin: 0;
+        margin-bottom: 15px;
 
         &.footer__logo {
           margin-right: 0;
@@ -104,8 +136,31 @@
     }
 
     &__socials {
-      width: 100px;
       margin-left: 0;
+
+      & li {
+        margin-right: 35px;
+      }
+    }
+
+    &__socials-link {
+      height: 27px;
+
+      &--vk {
+        width: 32px;
+      }
+
+      &--ig {
+        width: 27px;
+      }
+
+      &--fb {
+        width: 14px;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
     }
   }
 }

@@ -1,32 +1,51 @@
 .contacts {
   width: 50%;
-  padding-left: 120px;
+  padding-left: 124px;
   color: $secFontColor;
 
+  & h2 {
+    margin: 0;
+    margin-bottom: 46px;
+  }
+
   &__data {
+    position: relative;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
 
     list-style: none;
 
+    &::before {
+      content: "";
+      position: absolute;
+      height: 80%;
+      width: 1px;
+      top: 4px;
+      left: 50%;
+      background-color: gray;
+    }
+
     & li {
-      width: 45%;
-      margin-right: 5%;
+      margin-bottom: 18px;
+      min-width: 36%;
 
       &:nth-child(2n-1) {
-        border-right: 1px solid #74819c;
         margin-right: auto;
       }
     }
 
     & p {
+      font-size: 16px;
       font-weight: bold;
+      margin: 0;
+      margin-bottom: 2px;
     }
 
     & .contacts__data-spec {
       color: $secFontColor;
-      font-size: 14px;
+      line-height: 1;
     }
   }
 }
@@ -35,6 +54,34 @@
   .contacts {
     width: 100%;
     padding-left: 88px;
+    padding-top: 67px;
+    padding-bottom: 29px;
+
+    &__data {
+      & li {
+        margin-bottom: 21px;
+        padding-right: 7%;
+        min-width: 47%;
+      }
+
+      &::before {
+        left: 45%;
+      }
+    }
+
+    & h2 {
+      margin-bottom: 35px;
+    }
+
+    & p {
+      font-size: 20px;
+
+      margin-bottom: 10px;
+    }
+
+    & .contacts__data-spec {
+      font-size: 18px;
+    }
   }
 }
 
@@ -47,8 +94,8 @@
       & li {
         width: 100%;
 
-        &:nth-child(2n-1) {
-          border-right: none;
+        &.last-order {
+          order: 1;
         }
       }
     }

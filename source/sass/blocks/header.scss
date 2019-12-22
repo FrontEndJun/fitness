@@ -17,6 +17,10 @@
 .header__phone {
   color: #ffffff;
   margin-right: 3px;
+
+  &:hover {
+    color: aqua;
+  }
 }
 
 @media screen and (max-width: $tabletWidth) {

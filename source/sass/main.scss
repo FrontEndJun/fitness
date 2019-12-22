@@ -40,6 +40,9 @@ img {
 
 .half-bg {
   background: linear-gradient(to right, $darkBG 50%, #ffffff 50%);
+  padding-top: 65px;
+  padding-bottom: 32px;
+  border-top: 1px solid rgba($color: $darkBG, $alpha: 0.5);
 }
 
 .info-row {
@@ -50,6 +53,8 @@ img {
   .half-bg {
     background: none;
     position: relative;
+    padding: 0;
+    border-top: none;
   }
 
   .info-row {

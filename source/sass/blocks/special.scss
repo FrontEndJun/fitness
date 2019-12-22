@@ -1,18 +1,19 @@
 .special {
-  background-color: $darkBG;
   color: $mainFontColor;
   width: 50%;
   padding-right: 170px;
 
   & h2 {
     color: $mainFontColor;
+    margin: 0;
+    margin-bottom: 33px;
   }
 
   &__form-row {
     display: flex;
     flex-flow: column-reverse;
     width: calc(50% - 15px);
-    margin-bottom: 20px;
+    margin-bottom: 27px;
   }
 
   &__form {
@@ -51,7 +52,7 @@
     }
 
     & button {
-      padding: 20px 10px;
+      padding: 17px 10px;
       width: 100%;
       background: $darkBG;
       border: 3px solid #ffffff;
@@ -66,9 +67,19 @@
 
 @media screen and (max-width: $tabletWidth) {
   .special {
+    background-color: $darkBG;
+
     position: relative;
     width: 100%;
-    padding: 0 118px 0 88px;
+    padding: 67px 118px 69px 88px;
+
+    & h2 {
+      margin-bottom: 25px;
+    }
+
+    &__form-row {
+      width: calc(50% - 30px);
+    }
 
     &::before {
       position: absolute;
@@ -97,10 +108,16 @@
 @media screen and (max-width: $phoneWidth) {
   .special {
     width: 100%;
-    padding: 0 0 0 0;
+    padding-left: 0;
+    padding-right: 0;
 
     &__form-row {
       width: 100%;
+      margin-bottom: 23px;
+
+      &:last-of-type {
+        margin-bottom: 38px;
+      }
     }
   }
 }
