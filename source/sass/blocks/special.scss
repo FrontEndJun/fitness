@@ -45,6 +45,8 @@
     }
 
     & label {
+      align-self: flex-start;
+      cursor: pointer;
       position: relative;
       top: 15px;
       left: 3px;
@@ -52,6 +54,7 @@
     }
 
     & button {
+      cursor: pointer;
       padding: 17px 10px;
       width: 100%;
       background: $darkBG;

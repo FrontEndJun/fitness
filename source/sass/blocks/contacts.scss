@@ -98,6 +98,10 @@
           order: 1;
         }
       }
+
+      &::before {
+        display: none;
+      }
     }
   }
 }

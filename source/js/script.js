@@ -1,6 +1,21 @@
 'use strict';
 
 (function() {
+  function UInput(node) {
+    this.input = node.querySelector('input');
+    this.label = node.querySelector('label');
+    this.create();
+  }
+  UInput.prototype.create = function() {
+    this.input.onblur = this.blur.bind(this);
+  };
+  UInput.prototype.blur = function() {
+    if (this.input.value == '') {
+      this.label.style.position = 'relative';
+    } else {
+      this.label.style.position = 'static';
+    }
+  };
   function Tabs(node, content) {
     this.node = node;
     this.tabs = [].slice.call(node.querySelectorAll('li:not(.tabs__bar)'));
@@ -73,6 +88,12 @@
 
   const tabs = document.querySelector('.abonements__tabs');
   const content = document.querySelector('.abonements__list');
+
+  var inputs = document.querySelectorAll('.uinput');
+
+  for (var i = 0; i < inputs.length; i++) {
+    new UInput(inputs[i]);
+  }
 
   new Tabs(tabs, content);
   var tSlider = new Slider(document.querySelector('.slider'), 4);

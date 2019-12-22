@@ -1,6 +1,21 @@
 'use strict';
 
 (function() {
+  function UInput(node) {
+    this.input = node.querySelector('input');
+    this.label = node.querySelector('label');
+    this.create();
+  }
+  UInput.prototype.create = function() {
+    this.input.onblur = this.blur.bind(this);
+  };
+  UInput.prototype.blur = function() {
+    if (this.input.value == '') {
+      this.label.style.position = 'relative';
+    } else {
+      this.label.style.position = 'static';
+    }
+  };
   function Tabs(node, content) {
     this.node = node;
     this.tabs = [].slice.call(node.querySelectorAll('li:not(.tabs__bar)'));
@@ -71,13 +86,6 @@
     }
   };
 
-  const tabs = document.querySelector('.abonements__tabs');
-  const content = document.querySelector('.abonements__list');
-
-  new Tabs(tabs, content);
-  var tSlider = new Slider(document.querySelector('.slider'), 4);
-  adapSlides();
-
   function adapSlides() {
     if (document.documentElement.clientWidth >= 1200) {
       tSlider.slidesToShow = 4;
@@ -88,4 +96,29 @@
     }
     tSlider.show();
   }
+
+  var tabs = document.querySelector('.abonements__tabs');
+  var content = document.querySelector('.abonements__list');
+
+  var inputs = document.querySelectorAll('.uinput');
+  var advantages = document.querySelectorAll('.advantage');
+
+  for (var i = 0; i < advantages.length; i++) {
+    var elm = advantages[i];
+    var svg = elm.querySelector('svg');
+    if (!svg) continue;
+    var t = svg.querySelector('text');
+    var w = t.clientWidth;
+    var h = t.getBoundingClientRect().height;
+    svg.setAttribute('width', +w);
+    svg.setAttribute('height', +h);
+  }
+
+  for (var i = 0; i < inputs.length; i++) {
+    new UInput(inputs[i]);
+  }
+
+  new Tabs(tabs, content);
+  var tSlider = new Slider(document.querySelector('.slider'), 4);
+  adapSlides();
 })();
