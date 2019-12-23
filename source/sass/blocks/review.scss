@@ -1,0 +1,53 @@
+.review {
+  width: 100%;
+  padding: 54px 62px 57px 170px;
+  box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
+  color: $mainFontColor;
+  background-color: $darkBG;
+  background-image: url("../img/reviewer.png");
+  background-position: 62px 62px;
+  background-repeat: no-repeat;
+  display: none;
+  min-height: 242px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+
+  & span {
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 13px;
+  }
+
+  & p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  &.active {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: $phoneWidth) {
+  .review {
+    padding: 45px 25px 35px;
+    background-size: 68px;
+    background-position: 40px 40px;
+    min-height: 345px;
+
+    & span {
+      width: 44%;
+      max-width: 106px;
+      margin-left: auto;
+      line-height: 1.4;
+      margin-bottom: 23px;
+    }
+
+    & p {
+      text-align: center;
+    }
+  }
+}

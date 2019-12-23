@@ -120,5 +120,6 @@
 
   new Tabs(tabs, content);
   var tSlider = new Slider(document.querySelector('.slider'), 4);
+  var rSlider = new Slider(document.querySelector('.reviews__slider'), 1);
   adapSlides();
 })();
