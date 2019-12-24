@@ -45,8 +45,8 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: 38.1%;
-  top: 53.5%;
+  left: 38.9%;
+  top: 54%;
 
   & img {
     width: 364px;
@@ -175,12 +175,13 @@
 
     & p {
       align-self: flex-start;
-      margin-bottom: 33px;
+      margin-bottom: 34px;
       width: 90%;
     }
   }
 
   .gym__inner {
+    align-items: flex-start;
     padding-top: 67px;
     padding-bottom: 69px;
   }

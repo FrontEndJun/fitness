@@ -1,16 +1,16 @@
 'use strict';
 
-(function() {
+(function () {
   function UInput(node) {
     this.input = node.querySelector('input');
     this.label = node.querySelector('label');
     this.create();
   }
-  UInput.prototype.create = function() {
+  UInput.prototype.create = function () {
     this.input.onblur = this.blur.bind(this);
   };
-  UInput.prototype.blur = function() {
-    if (this.input.value == '') {
+  UInput.prototype.blur = function () {
+    if (this.input.value === '') {
       this.label.style.position = 'relative';
     } else {
       this.label.style.position = 'static';
@@ -20,7 +20,7 @@
     this.node = node;
     this.tabs = [].slice.call(node.querySelectorAll('li:not(.tabs__bar)'));
     this.activeTab =
-      this.tabs.findIndex(function(elm) {
+      this.tabs.findIndex(function (elm) {
         return elm.classList.contains('active');
       }) || 0;
     this.switcher = {
@@ -29,16 +29,14 @@
     };
     this.content = content;
     this.openTab(this.activeTab);
-    this.node.addEventListener(
-      'click',
-      function(e) {
-        const index = this.tabs.indexOf(e.target.closest('li'));
-        this.openTab(index);
-        this.activeTab = index;
-      }.bind(this)
+    this.node.addEventListener('click', function (e) {
+      var index = this.tabs.indexOf(e.target.closest('li'));
+      this.openTab(index);
+      this.activeTab = index;
+    }.bind(this)
     );
   }
-  Tabs.prototype.openTab = function(index) {
+  Tabs.prototype.openTab = function (index) {
     this.node.children[this.activeTab].classList.remove('active');
     var tab = this.node.children[index];
     tab.classList.add('active');
@@ -64,18 +62,18 @@
     this.controls.next.onclick = this.nextSlide.bind(this);
     this.show();
   }
-  Slider.prototype.prevSlide = function() {
+  Slider.prototype.prevSlide = function () {
     var sl = this.curSlide - this.slidesToShow;
     this.curSlide = sl < 0 ? 0 : sl;
     this.show();
   };
-  Slider.prototype.nextSlide = function() {
+  Slider.prototype.nextSlide = function () {
     var sl = this.curSlide + this.slidesToShow;
     var l = this.slides.length;
     this.curSlide = sl >= l ? this.curSlide : sl;
     this.show();
   };
-  Slider.prototype.show = function() {
+  Slider.prototype.show = function () {
     for (var i = 0; i < this.slides.length; i++) {
       var cond = i >= this.curSlide && i < this.curSlide + this.slidesToShow;
       if (cond) {
@@ -85,6 +83,21 @@
       }
     }
   };
+
+  function createSlider(node, slides) {
+    var s = new Slider(node, slides);
+    return s;
+  }
+
+  function createUInput(node) {
+    var i = new UInput(node);
+    return i;
+  }
+
+  function createTabs(tabs, content) {
+    var t = new Tabs(tabs, content);
+    return t;
+  }
 
   function adapSlides() {
     if (document.documentElement.clientWidth >= 1200) {
@@ -106,7 +119,9 @@
   for (var i = 0; i < advantages.length; i++) {
     var elm = advantages[i];
     var svg = elm.querySelector('svg');
-    if (!svg) continue;
+    if (!svg) {
+      continue;
+    }
     var t = svg.querySelector('text');
     var w = t.clientWidth;
     var h = t.getBoundingClientRect().height;
@@ -114,12 +129,12 @@
     svg.setAttribute('height', +h);
   }
 
-  for (var i = 0; i < inputs.length; i++) {
-    new UInput(inputs[i]);
+  for (i = 0; i < inputs.length; i++) {
+    createUInput(inputs[i]);
   }
 
-  new Tabs(tabs, content);
-  var tSlider = new Slider(document.querySelector('.slider'), 4);
-  var rSlider = new Slider(document.querySelector('.reviews__slider'), 1);
+  createTabs(tabs, content);
+  var tSlider = createSlider(document.querySelector('.slider'), 4);
+  createSlider(document.querySelector('.reviews__slider'), 1);
   adapSlides();
 })();
