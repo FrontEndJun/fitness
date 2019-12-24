@@ -2,8 +2,9 @@
 
 (function () {
   var elm = Element.prototype;
-  if (!Array.prototype.findIndex) {
-    Array.prototype.findIndex = function (predicate) {
+  var arrayPrototype = Array.prototype;
+  if (!arrayPrototype.findIndex) {
+    arrayPrototype.findIndex = function (predicate) {
       if (this === null) {
         throw new TypeError('Array.prototype.findIndex called on null or undefined');
       }
