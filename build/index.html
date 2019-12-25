@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Gym trainers weights muscle pump iron">
   <title>Стартовый шаблон</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -28,9 +29,9 @@
           <a href="#abonements" class="button promo__button">Купить абонемент</a>
         </div>
         <ul class="promo__socials">
-          <li><a href="" class="promo__social-link">fb</a></li>
-          <li><a href="" class="promo__social-link">vk</a></li>
-          <li><a href="" class="promo__social-link">ig</a></li>
+          <li><a href="#" class="promo__social-link">fb</a></li>
+          <li><a href="#" class="promo__social-link">vk</a></li>
+          <li><a href="#" class="promo__social-link">ig</a></li>
         </ul>
       </div>
     </section>
@@ -45,11 +46,13 @@
         <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
         </div>
         <div class="gym__promo-img">
-          <img src="./img/gym1.jpg" alt="Наш зал" srcset="./img/gym1@2x.jpg 200w">
+          <!-- 1x:660px; 2x: 1320px -->
+          <img src="./img/gym1.jpg" alt="Наш зал" srcset="./img/gym1.jpg 1x, ./img/gym1@2x.jpg 2x">
         </div>
         <div class="gym__promo-vid">
-          <button>▶</button>
-          <img class="gym__video" src="./img/gym2.jpg" alt="Видео" srcset="">
+          <button type="button">▶</button>
+          <!-- 1x:364px; 2x:728px -->
+          <img class="gym__video" src="img/gym2.jpg" srcset="./img/gym2.jpg 1x, ./img/gym2@2x.jpg 2x" alt="Видео">
         </div>
       </div>
     </section>
@@ -60,9 +63,6 @@
           <li class="active">1 месяц</li>
           <li>6 месяцев</li>
           <li>12 месяцев</li>
-          <li class="tabs__bar">
-            <span class="tabs__bar-line"></span>
-          </li>
         </ul>
         <div class="abonements__list">
           <ul class="abonements__list-tab active">
@@ -73,7 +73,7 @@
               <span class="abonement__price">5000
                 <i class="abonement__currency">₽</i>
               </span>
-              <a class="button abonement__button" href="">купить абонемент</a>
+              <a class="button abonement__button" href="#">купить абонемент</a>
             </li>
             <li class="abonement abonements__card">
               <p>Дневной</p>
@@ -82,7 +82,7 @@
               <span class="abonement__price">1700
                 <i class="abonement__currency">₽</i>
               </span>
-              <a class="button abonement__button" href="">купить абонемент</a>
+              <a class="button abonement__button" href="#">купить абонемент</a>
             </li>
             <li class="abonement abonements__card">
               <p> Полный день</p>
@@ -91,62 +91,7 @@
               <span class="abonement__price">2700
                 <i class="abonement__currency">₽</i>
               </span>
-              <a class="button abonement__button" href="">купить абонемент</a>
-            </li>
-          </ul>
-          <ul class="abonements__list-tab">
-            <li class="abonement abonements__card">
-              <p>С тренером</p>
-              <span class="abonement__descr">12 занятий</span>
-              <span class="abonement__back-price">6000</span>
-              <span class="abonement__price">6000
-                <i class="abonement__currency">₽</i>
-              </span>
-              <a class="button abonement__button" href="">купить абонемент</a>
-            </li>
-            <li class="abonement abonements__card">
-              <p>Дневной</p>
-              <span class="abonement__descr">с 8:00 до 17:00 </span>
-              <span class="abonement__back-price">3700</span>
-              <span class="abonement__price">3700
-                <i class="abonement__currency">₽</i>
-              </span>
-              <a class="button abonement__button" href="">купить абонемент</a>
-            </li>
-            <li class="abonement abonements__card">
-              <p> Полный день</p>
-              <span class="abonement__descr">с 8:00 до 22:00</span>
-              <span class="abonement__back-price">5700</span>
-              <span class="abonement__price">5700
-                <i class="abonement__currency">₽</i>
-              </span>
-              <a class="button abonement__button" href="">купить абонемент</a>
-            </li>
-          </ul>
-          <ul class="abonements__list-tab">
-            <li class="abonement abonements__card">
-              <p>С тренером</p>
-              <span class="abonement__descr">12 занятий</span>
-              <span class="abonement__back-price">9000</span>
-              <span class="abonement__price">9000<i class="abonement__currency">₽</i>
-              </span>
-              <a class="button abonement__button" href="">купить абонемент</a>
-            </li>
-            <li class="abonement abonements__card">
-              <p>Дневной</p>
-              <span class="abonement__descr">с 8:00 до 17:00 </span>
-              <span class="abonement__back-price">6700</span>
-              <span class="abonement__price">6700<i class="abonement__currency">₽</i>
-              </span>
-              <a class="button abonement__button" href="">купить абонемент</a>
-            </li>
-            <li class="abonement abonements__card">
-              <p> Полный день</p>
-              <span class="abonement__descr">с 8:00 до 22:00</span>
-              <span class="abonement__back-price">7700</span>
-              <span class="abonement__price">7700<i class="abonement__currency">₽</i>
-              </span>
-              <a class="button abonement__button" href="">купить абонемент</a>
+              <a class="button abonement__button" href="#">купить абонемент</a>
             </li>
           </ul>
         </div>
@@ -177,16 +122,15 @@
             </li>
           </ul>
           <p>Ежегодные соревнования по CrossFit</p>
-          <a href="" class="button announce__button">заполнить заявку</a>
+          <a href="#" class="button announce__button">заполнить заявку</a>
         </div>
-        <div class="announce-bg"></div>
       </div>
     </section>
     <section class="trainers">
       <div class="container">
         <h2>Тренеры</h2>
         <div class="slider">
-          <button class="prev"></button>
+          <button type="button" class="prev">Prev Slide</button>
           <ul class="trainers__list">
             <li class="trainer trainer--1 slide">
               <p>Анна Павлова</p>
@@ -266,7 +210,7 @@
               </div>
             </li>
           </ul>
-          <button class="next"></button>
+          <button type="button" class="next">Next Slide</button>
         </div>
       </div>
     </section>
@@ -274,14 +218,14 @@
       <div class="container advantages__inner">
         <h2>Наши преимущества</h2>
         <ul class="advantages__list">
-        <li class="advantages__item advantage">
-          <div class="advantage__info-title small">
+        <li class="advantages__item advantage small">
+          <div class="advantage__info-title">
             <svg width="100" height="0">
-              <linearGradient gradientUnits="objectBoundingBox" id="gr-overlay" x1="0" y1="0" x2="100%" y2="100%">
+              <linearGradient gradientUnits="objectBoundingBox" id="gradient1" x1="0" y1="0" x2="100%" y2="100%">
               <stop stop-color="#D10A42" offset="0%"></stop>
               <stop stop-color="#0041CA" offset="70%"></stop>
               </linearGradient>
-              <text x="0" y="1em" class="gradient-layer">
+              <text x="0" y="1em" fill="url(#gradient1)">
               900
               </text>
             </svg>
@@ -295,11 +239,11 @@
         <li class="advantages__item advantage mla">
           <div class="advantage__info-title">
             <svg width="100" height="1em">
-              <linearGradient gradientUnits="objectBoundingBox" id="gr-overlay" x1="0" y1="0" x2="100%" y2="100%">
+              <linearGradient gradientUnits="objectBoundingBox" id="gradient2" x1="0" y1="0" x2="100%" y2="100%">
               <stop stop-color="#D10A42" offset="0%"></stop>
               <stop stop-color="#0041CA" offset="70%"></stop>
               </linearGradient>
-              <text x="0" y="1em" class="gradient-layer">
+              <text x="0" y="1em" fill="url(#gradient2)">
               70
               </text>
             </svg>
@@ -315,14 +259,14 @@
           <p>Тренажеров</p>
           <span>Современные тренажеры на все группы мышц</span>
         </li>
-        <li class="advantages__item advantage">
-          <div class="advantage__info-title small">
+        <li class="advantages__item advantage small">
+          <div class="advantage__info-title">
             <svg width="100" height="1em">
-              <linearGradient gradientUnits="objectBoundingBox" id="gr-overlay" x1="0" y1="0" x2="100%" y2="100%">
+              <linearGradient gradientUnits="objectBoundingBox" id="gradient3" x1="0" y1="0" x2="100%" y2="100%">
               <stop stop-color="#D10A42" offset="0%"></stop>
               <stop stop-color="#0041CA" offset="70%"></stop>
               </linearGradient>
-              <text x="0" y="1em" class="gradient-layer">
+              <text x="0" y="1em" fill="url(#gradient3)">
               350
               </text>
             </svg>
@@ -336,11 +280,11 @@
         <li class="advantages__item advantage">
           <div class="advantage__info-title">
             <svg width="100" height="1em">
-              <linearGradient gradientUnits="objectBoundingBox" id="gr-overlay" x1="0" y1="0" x2="100%" y2="100%">
+              <linearGradient gradientUnits="objectBoundingBox" id="gradient4" x1="0" y1="0" x2="100%" y2="100%">
               <stop stop-color="#D10A42" offset="0%"></stop>
               <stop stop-color="#0041CA" offset="70%"></stop>
               </linearGradient>
-              <text x="0" y="1em" class="gradient-layer ">
+              <text x="0" y="1em" fill="url(#gradient4)">
               5+
               </text>
             </svg>
@@ -364,19 +308,19 @@
             <span>Год</span>
             <strong>4999</strong>
             <p>Безлимитный абонемент в тренажерный зал</p>
-            <a href="">подробнее</a>
+            <a href="#">подробнее</a>
           </div>
         </div>
         <ul class="sales__list">
           <li class="offer">
             <p>Месяц бесплатно</p>
             <span>Приведи друга, получи абонемент в подарок</span>
-            <a href="">подробнее</a>
+            <a href="#">подробнее</a>
           </li>
           <li class="offer">
             <p>Скидка 20%</p>
             <span>Корпоративный фитнес  с командой</span>
-            <a href="">подробнее</a>
+            <a href="#">подробнее</a>
           </li>
         </ul>
       </div>
@@ -385,7 +329,7 @@
       <div class="container reviews__inner">
         <h2>Отзывы</h2>
         <div class="slider reviews__slider">
-          <button class="prev"></button>
+          <button type="button" class="prev">Prev Slide</button>
           <ul class="reviews__list">
             <li class="review slide">
               <span>Анна Орлова</span>
@@ -404,7 +348,7 @@
               <p>«Зал просторный, даже в вечернее время нет очередей»</p>
             </li>
           </ul>
-          <button class="next"></button>
+          <button type="button" class="next">Next Slide</button>
         </div>
       </div>
     </section>
@@ -414,11 +358,11 @@
           <h2>бЕСПЛАТНОЕ ЗАНЯТИЕ</h2>
           <form class="special__form">
             <div class="special__form-row uinput">
-              <input type="text" name="name" id="name">
+              <input type="text" name="name" id="name" required="">
               <label for="name">Имя</label>
             </div>
             <div class="special__form-row uinput">
-              <input type="tel" name="tel" id="tel">
+              <input type="tel" name="tel" id="tel" required="">
               <label for="tel">Телефон</label>
             </div>
             <button type="submit" class="button">отправить</button>
@@ -457,25 +401,25 @@
           <a class="logo" href="#">Supergym</a>
         </li>
         <li>
-          <a class="footer__link" href="">Акции</a>
+          <a class="footer__link" href="#">Акции</a>
         </li>
         <li class="order">
-          <a class="footer__link" href="">Услуги</a>
+          <a class="footer__link" href="#">Услуги</a>
         </li>
         <li>
-          <a class="footer__link" href="">Тренеры</a>
+          <a class="footer__link" href="#">Тренеры</a>
         </li>
         <li class="order">
-          <a class="footer__link" href="">Абонементы</a>
+          <a class="footer__link" href="#">Абонементы</a>
         </li>
         <li>
-          <a class="footer__link" href="">Расписание</a>
+          <a class="footer__link" href="#">Расписание</a>
         </li>
       </ul>
       <ul class="footer__socials">
-        <li><a class="footer__socials-link footer__socials-link--vk" href="">VK</a></li>
-        <li><a class="footer__socials-link footer__socials-link--ig" href="">IG</a></li>
-        <li><a class="footer__socials-link footer__socials-link--fb" href="">FB</a></li>
+        <li><a class="footer__socials-link footer__socials-link--vk" href="#">VK</a></li>
+        <li><a class="footer__socials-link footer__socials-link--ig" href="#">IG</a></li>
+        <li><a class="footer__socials-link footer__socials-link--fb" href="#">FB</a></li>
       </ul>
     </div>
 

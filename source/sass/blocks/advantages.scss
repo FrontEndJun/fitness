@@ -9,13 +9,12 @@
   }
 
   &__list {
-    width: 90%;
+    width: 100%;
     min-height: 307px;
-    height: 307px;
+
     margin: 0 auto;
     position: relative;
     padding: 0;
-    padding-left: 25px;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -25,11 +24,7 @@
     color: $secFontColor;
 
     & li {
-      margin-bottom: 0;
-
-      &.mla {
-        margin-left: auto;
-      }
+      margin-bottom: 84px;
     }
   }
 }
@@ -37,7 +32,7 @@
 @media screen and (max-width: $tabletWidth) {
   .advantages {
     background-color: $lightBG;
-    padding: 98px 0 51px;
+    padding: 98px 0 95px;
 
     & h2 {
       margin-bottom: 49px;
@@ -50,10 +45,6 @@
 
       & li {
         margin-bottom: 44px;
-
-        &.mla {
-          margin-left: 0;
-        }
       }
     }
   }
@@ -61,7 +52,7 @@
 
 @media screen and (max-width: $phoneWidth) {
   .advantages {
-    padding: 68px 0 52px;
+    padding: 68px 0 67px;
 
     & h2 {
       margin-bottom: 23px;

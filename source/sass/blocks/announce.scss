@@ -5,21 +5,16 @@
     display: flex;
   }
 
-  &-bg {
-    background: url("../img/announce.jpg") no-repeat center #ed0233;
-    background-size: cover;
-    flex-grow: 1;
-  }
-
   &__column {
+    background: url("../img/announce.jpg") no-repeat top right #ed0233;
     background-color: #ed0233;
     box-sizing: border-box;
-    width: 43%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-    padding: 80px 78px 84px;
+    padding: 80px calc(56.9% + 78px)  84px 78px;
 
     & > p {
       width: 100%;
@@ -102,7 +97,8 @@
     padding: 100px 0 60px;
 
     &__column {
-      padding: 46px 44px 51px;
+      padding: 46px 430px 51px 44px;
+      background-size: 386px 292px;
 
       & > p {
         font-size: 12px;
@@ -169,6 +165,10 @@
 
     &__column {
       width: 100%;
+      padding-right: 44px;
+      padding-bottom: 343px;
+      background-position: center bottom;
+      background-size: 100% 292px;
     }
 
     &-bg {

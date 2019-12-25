@@ -7,6 +7,8 @@
   width: 338px;
   justify-content: space-between;
   align-items: flex-start;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba($darkBG, 0.3);
 
   & li {
     opacity: 0.5;
@@ -15,28 +17,17 @@
 
     &.active {
       opacity: 1;
-    }
-
-    &.tabs__bar {
-      width: 100%;
-      opacity: 1;
       position: relative;
-      top: 11px;
-      height: 2px;
-      left: 0;
-      bottom: 0;
-      background-color: rgba($color: $darkBG, $alpha: 0.3);
-    }
 
-    & .tabs__bar-line {
-      position: absolute;
-      width: 15%;
-      height: 100%;
-      left: 0;
-      top: 0;
-      background-color: #d10a42;
-      z-index: 1;
-      transition: left 0.2s ease-in, width 0.3s linear;
+      &::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background-color: #d10a42;
+        left: 0;
+        bottom: -12px;
+      }
     }
   }
 }
@@ -45,9 +36,16 @@
   .tabs {
     width: 100%;
     max-width: 332px;
+    padding-bottom: 12px;
 
     & li {
       font-size: 18px;
+
+      &.active {
+        &::before {
+          bottom: -14px;
+        }
+      }
     }
   }
 }
@@ -55,6 +53,7 @@
 @media screen and (max-width: $phoneWidth) {
   .tabs {
     max-width: auto;
+    padding-bottom: 12px;
 
     & li {
       font-size: 16px;

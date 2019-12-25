@@ -1,11 +1,40 @@
 .advantage {
+  position: relative;
   display: flex;
   align-items: flex-start;
-  width: calc(340 / 1040 * 100%);
+  width: 39.6%;
   min-width: 340px;
+  padding: 0 51px 80px  61px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 340px;
+    height: 2px;
+    background-color: rgba(209, 10, 66, 0.2);
+    bottom: -2px;
+    left: 62px;
+  }
+
+  &:nth-last-child(1),
+  &:nth-last-child(2) {
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &.small {
+    padding-left: 80px;
+
+    & .advantage__info-title {
+      margin-right: 39px;
+    }
+  }
 
   & text {
-    fill: url("#gr-overlay");
     font-weight: bold;
     font-size: 71px;
   }
@@ -15,14 +44,18 @@
     position: absolute;
     flex-wrap: wrap;
     top: 0;
-    left: calc(400 / 1040 * 100% + 1px);
+    left: calc(460 / 1160 * 100%);
     background-color: $darkBG;
     color: $mainFontColor;
     align-items: center;
-    width: calc(240 / 1040 * 100%);
-    min-width: calc(240 / 1040 * 100%);
+    width: calc(240 / 1160 * 100%);
+    min-width: calc(240 / 1160 * 100%);
     height: 100%;
     padding: 55px 34px;
+
+    &::before {
+      display: none;
+    }
 
     & strong {
       width: 100%;
@@ -52,10 +85,6 @@
     min-width: 100px;
     margin-right: 0;
     padding-top: 60px;
-
-    &.small {
-      margin-right: 42px;
-    }
 
     & svg {
       top: -22px;
@@ -92,6 +121,19 @@
   .advantage {
     width: calc(50% - 15px);
     min-width: 0;
+    padding: 0;
+
+    &::before {
+      display: none;
+    }
+
+    &.small {
+      padding-left: 0;
+
+      & .advantage__info-title {
+        margin-right: 30px;
+      }
+    }
 
     &--special {
       position: static;
@@ -106,7 +148,6 @@
     }
 
     & text {
-      fill: url("#gr-overlay");
       font-weight: bold;
       font-size: 58px;
     }
@@ -116,10 +157,6 @@
       width: 88px;
       padding-top: 54px;
       margin-right: 0;
-
-      &.small {
-        margin-right: 30px;
-      }
 
       & svg {
         top: -14px;
@@ -143,7 +180,15 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 14px 25px;
+    padding: 14px 28px;
+
+    &.small {
+      padding: 14px 28px;
+
+      & .advantage__info-title {
+        margin-right: 0;
+      }
+    }
 
     &--special {
       position: relative;
@@ -166,6 +211,7 @@
 
       &::before,
       &::after {
+        display: block;
         content: "";
         position: absolute;
         width: 40px;
@@ -188,10 +234,6 @@
       padding-top: 0;
       margin-right: 0;
       margin-bottom: 12px;
-
-      &.small {
-        margin-right: 0;
-      }
 
       & svg {
         position: relative;

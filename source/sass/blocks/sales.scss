@@ -18,11 +18,13 @@
     color: $mainFontColor;
     background: url("../img/sale-d.jpg") no-repeat center right #ed0233;
     width: calc(50% - 20px);
+    height: 462px;
 
     & .column {
       width: 50%;
       padding: 42px 35px 45px 45px;
-      min-height: 462px;
+      align-self: flex-start;
+      height: 100%;
     }
 
     & span {
@@ -40,10 +42,10 @@
     & p {
       margin-top: 0;
       font-size: 18px;
+      margin-bottom: auto;
     }
 
     & a {
-      margin-top: auto;
       color: $mainFontColor;
       font-size: 14px;
       line-height: 16px;
@@ -130,6 +132,7 @@
       background-size: 100% 299px;
       width: 100%;
       padding-bottom: 299px;
+      height: auto;
 
       & .column {
         align-items: center;
