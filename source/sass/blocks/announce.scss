@@ -98,7 +98,9 @@
 
     &__column {
       padding: 46px 430px 51px 44px;
-      background-size: 386px 292px;
+      background-size: 56.9% 292px;
+      width: 678px;
+      margin: 0 auto;
 
       & > p {
         font-size: 12px;
@@ -164,8 +166,9 @@
     }
 
     &__column {
-      width: 100%;
+      width: 320px;
       padding-right: 44px;
+      padding-left: 44px;
       padding-bottom: 343px;
       background-position: center bottom;
       background-size: 100% 292px;

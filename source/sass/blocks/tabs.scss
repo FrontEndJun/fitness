@@ -4,7 +4,7 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  width: 338px;
+  min-width: 338px;
   justify-content: space-between;
   align-items: flex-start;
   padding-bottom: 10px;
@@ -13,7 +13,12 @@
   & li {
     opacity: 0.5;
     font-size: 20px;
+    margin-right: 10px;
     cursor: pointer;
+
+    &:last-child {
+      margin-right: 0;
+    }
 
     &.active {
       opacity: 1;

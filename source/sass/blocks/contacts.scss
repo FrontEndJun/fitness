@@ -17,6 +17,10 @@
 
     list-style: none;
 
+    & a:hover {
+      border-bottom: 1px solid $darkBG;
+    }
+
     &::before {
       content: "";
       position: absolute;

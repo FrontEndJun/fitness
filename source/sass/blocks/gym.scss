@@ -45,7 +45,7 @@
   align-items: center;
   position: absolute;
   left: 38.9%;
-  top: 54%;
+  top: 407px;
 
   & img {
     width: 364px;
@@ -53,6 +53,7 @@
   }
 
   & button {
+    cursor: pointer;
     color: $mainFontColor;
     text-align: center;
     padding: 0;

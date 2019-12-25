@@ -129,4 +129,8 @@
   var tSlider = createSlider(document.querySelector('.slider'), 4);
   createSlider(document.querySelector('.reviews__slider'), 1);
   adapSlides();
+
+  window.addEventListener("resize", function (e) {
+    adapSlides();
+  });
 })();

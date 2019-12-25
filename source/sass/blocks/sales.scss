@@ -90,9 +90,9 @@
     }
 
     &__promo {
-      width: 100%;
+      width: 678px;
       background-image: url("../img/sale-t.jpg");
-      margin-bottom: 30px;
+      margin: 0 auto 30px;
 
       & .column {
         width: 41%;
@@ -130,7 +130,7 @@
     &__promo {
       background: url("../img/sale-m.jpg") no-repeat bottom center #ed0233;
       background-size: 100% 299px;
-      width: 100%;
+      width: 320px;
       padding-bottom: 299px;
       height: auto;
 
