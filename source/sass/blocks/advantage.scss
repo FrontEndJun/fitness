@@ -43,14 +43,15 @@
     text-align: center;
     position: absolute;
     flex-wrap: wrap;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     left: calc(460 / 1160 * 100%);
     background-color: $darkBG;
     color: $mainFontColor;
     align-items: center;
     width: calc(240 / 1160 * 100%);
     min-width: calc(240 / 1160 * 100%);
-    height: 100%;
+    height: 307px;
     padding: 55px 34px;
 
     &::before {

@@ -40,16 +40,12 @@
 
 .abonements__list-tab {
   margin: 0;
-  display: none;
+  display: flex;
   flex-wrap: wrap;
   align-self: stretch;
 
   list-style: none;
   padding: 0;
-
-  &.active {
-    display: flex;
-  }
 }
 
 .abonements__card {

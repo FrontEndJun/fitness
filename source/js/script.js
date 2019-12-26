@@ -110,6 +110,9 @@
 
   for (var i = 0; i < advantages.length; i++) {
     var elm = advantages[i];
+    if (!elm) {
+      continue;
+    }
     var svg = elm.querySelector('svg');
     if (!svg) {
       continue;
@@ -122,15 +125,24 @@
   }
 
   for (i = 0; i < inputs.length; i++) {
-    createUInput(inputs[i]);
+    if (inputs[i]) {
+      createUInput(inputs[i]);
+    }
   }
 
   createTabs(tabs, content);
-  var tSlider = createSlider(document.querySelector('.slider'), 4);
-  createSlider(document.querySelector('.reviews__slider'), 1);
+
+  var sliderOfTrainers = document.querySelector('.slider');
+  if (sliderOfTrainers) {
+    var tSlider = createSlider(sliderOfTrainers, 4);
+  }
+  var sliderOfReviews = document.querySelector('.reviews__slider');
+  if (sliderOfReviews) {
+    createSlider(sliderOfReviews, 1);
+  }
   adapSlides();
 
-  window.addEventListener("resize", function (e) {
+  window.addEventListener('resize', function () {
     adapSlides();
   });
 })();
