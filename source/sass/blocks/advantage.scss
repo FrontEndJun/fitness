@@ -138,6 +138,7 @@
 
     &--special {
       position: static;
+      transform: none;
       width: 65%;
       margin: 0 auto;
       padding: 37px 130px;
@@ -192,7 +193,6 @@
     }
 
     &--special {
-      transform: none;
       position: relative;
       top: 0;
       left: 0;
